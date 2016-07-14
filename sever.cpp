@@ -46,7 +46,7 @@ int main(int argc,char **argv)
 		for(int i=0;i<epoll_events_count;++i)
 		{
 			int sockfd=events[i].data.fd;
-			if(sockfd=listenfd)
+			if(sockfd==listenfd)
 			{
 				struct sockaddr_in client_address;
 				socklen_t client_addrLength=sizeof(struct sockaddr_in);
